@@ -15,6 +15,12 @@ public class Main {
         System.out.println(yagua);
         yagua.comer();
         yagua.dormir();
+
+        yagua.cazar();
+
+        yagua.rugir();
+
+        yagua.maullar();
     }
 }
 
