@@ -7,6 +7,16 @@ public class Jaguar extends Animal implements IFelino {
     private int edad;
     private float peso;
 
+    public Jaguar(){
+        this.edad = 0;
+        this.peso = 0f;
+    }
+
+    public Jaguar(int edad){
+        this.edad = edad;
+        this.peso = 0.0f;
+    }
+
     public Jaguar(int edad, float peso){
         this.edad = edad;
         this.peso = peso;

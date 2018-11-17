@@ -21,6 +21,12 @@ public class Main {
         yagua.rugir();
 
         //yagua.maullar();
+
+        Jaguar yagua2 = new Jaguar();
+        System.out.println(yagua2);
+
+        Jaguar yagua3 = new Jaguar(11);
+        System.out.println(yagua3);
     }
 }
 
