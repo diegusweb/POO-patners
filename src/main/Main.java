@@ -13,6 +13,8 @@ public class Main {
         //yagua.setPeso(110f);
 
         System.out.println(yagua);
+        yagua.comer();
+        yagua.dormir();
     }
 }
 
