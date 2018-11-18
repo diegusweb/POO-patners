@@ -37,7 +37,5 @@ public class Rectangulo {
         return this.getBase() * this.getAltura();
     }
 
-    public void imprimir(){
-        System.out.println(this);
-    }
+
 }
