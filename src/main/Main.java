@@ -8,9 +8,12 @@ public class Main {
     public static void main(String[] args){
 
         //instancia crear un nuevo objeto con principio de liskov
-        IFelino yagua = new Jaguar(20, 120f);
+        IFelinoSalvaje yagua = new Jaguar(20, 120f);
 
-        yagua.cazar();
+        yagua.rugir();
+
+        IFelinoCasero gato = new Gato(5, 40f);
+        gato.maullar();
     }
 }
 

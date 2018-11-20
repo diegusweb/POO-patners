@@ -3,7 +3,7 @@ package main;
 /**
  * Created by DIego on 11/17/2018.
  */
-public class Jaguar extends Animal implements IFelino {
+public class Jaguar extends Animal implements IFelinoSalvaje {
     private int edad;
     private float peso;
 
@@ -46,11 +46,6 @@ public class Jaguar extends Animal implements IFelino {
     @Override
     public void rugir() {
         System.out.println("El jaguar ruge");
-    }
-
-    @Override
-    public void maullar() {
-        throw new UnsupportedOperationException("El jaguar no maulla");
     }
 
     @Override
