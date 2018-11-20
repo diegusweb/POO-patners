@@ -5,12 +5,12 @@ package Computer;
  */
 public class Computadora {
 
-    private Teclado teclado;
-    private Mouse mouse;
+    private ITeclado teclado;
+    private IMouse mouse;
 
-    public Computadora() {
-        this.teclado = new Teclado();
-        this.mouse = new Mouse();
+    public Computadora(Teclado teclado, Mouse mouse) {
+        this.teclado = teclado;
+        this.mouse = mouse;
     }
 
     public void encender()
