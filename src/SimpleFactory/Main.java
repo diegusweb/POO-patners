@@ -4,7 +4,9 @@ public class Main {
 
     public static void main(String[] args){
 
-        Pizza pizzaPeperoni = new Pizza(8);
+        Pizzeria donJuan = new Pizzeria();
+
+        Pizza pizzaPeperoni = donJuan.crearPizzaMediana();
         System.out.println(pizzaPeperoni);
     }
 }
