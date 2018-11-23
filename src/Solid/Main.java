@@ -10,9 +10,12 @@ public class Main {
 
         Triangulo triangulo = new Triangulo(10,5);
 
+        Circulo circulo = new Circulo(5);
+
         Presentacion presentacion = new Presentacion();
 
         presentacion.area(rectangulo);
         presentacion.area(triangulo);
+        presentacion.area(circulo);
     }
 }
