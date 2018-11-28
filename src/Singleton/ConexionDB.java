@@ -9,7 +9,7 @@ public class ConexionDB {
 
     }
 
-    public static ConexionDB obteberConexion()
+    public synchronized static ConexionDB obteberConexion()
     {
         if(conexion == null){ //que no se ha realizado una instancia
             conexion = new ConexionDB();

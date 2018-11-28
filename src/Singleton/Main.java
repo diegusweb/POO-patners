@@ -4,12 +4,23 @@ public class Main {
 
     public static void main(String[] args){
 
-        ConexionDB conexionDB = ConexionDB.obteberConexion();
-        ConexionDB conexionDB2 = ConexionDB.obteberConexion();
+       Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                ConexionDB conexion = ConexionDB.obteberConexion();
+                System.out.println(conexion.hashCode());
+            }
+        });
 
-        conexionDB.Host = "localhost";
+        Thread t2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                ConexionDB conexion = ConexionDB.obteberConexion();
+                System.out.println(conexion.hashCode());
+            }
+        });
 
-        System.out.println(conexionDB.Host);
-        System.out.println(conexionDB2.Host);
+        t1.start();
+        t2.start();
     }
 }
