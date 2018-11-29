@@ -11,6 +11,9 @@ public class Usuario {
     private String telefono;
     private String direccion;
 
+    private String medioDePago;
+    private String token;
+
     //Generar un costructor en el que reviba por parametro los parametros obligatorios
     private Usuario(String nombre, String apellido) {
         this.nombre = nombre;
@@ -18,6 +21,8 @@ public class Usuario {
         this.email = "";
         this.telefono = "";
         this.direccion = "";
+        this.medioDePago = "";
+        this.token = "";
     }
 
     public BuilderUsuario setMedioOcntacto(boolean medioOcntacto) {
@@ -33,15 +38,13 @@ public class Usuario {
         return new Usuario(nombre, apellido);
     }
 
-
-
     //ultimo paso es generar un nevo objeto
     public Usuario Build() {
         return this;
     }
 
     public String toString() {
-        return " " + this.nombre + " " + this.apellido + " " + this.email + " " + this.telefono;
+        return " " + this.nombre + " " + this.apellido + " " + this.email + " " + this.telefono+ " " + this.direccion+ " " + this.medioDePago;
     }
 
 
@@ -67,8 +70,25 @@ public class Usuario {
             return this;
         }
 
+        public BuilderUsuario setMedioDePago(String medioDePago) {
+            if(usuario.email == "")
+                throw  new IllegalArgumentException("No es posible porque son vacios");
+
+            usuario.medioDePago = medioDePago;
+            return this;
+        }
+
+        public BuilderUsuario setToken(String token){
+            if(usuario.medioDePago == "")
+                throw  new IllegalArgumentException("No es posible porque medio de pago es vacio");
+
+            usuario.token = token;
+            return this;
+        }
+
         public Usuario Build(){
             return usuario;
         }
     }
+
 }
